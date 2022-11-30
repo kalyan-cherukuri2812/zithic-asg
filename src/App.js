@@ -12,7 +12,7 @@ function App() {
 
 let data=[]
 
-  for (let i = 0;i < 1000; i++) {
+  for (let i = 0;i < 10000; i++) {
     const ID= faker.datatype.uuid();
     const userName=faker.name.fullName();
     const address=faker.helpers.arrayElement(['Canada', 'United States', 'Sweden','Japan','Australia','United Kingdom','France','India','Russia','Italy',]);
