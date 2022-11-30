@@ -3,6 +3,7 @@ import './App.css';
 import Barcharts from "./components/Barchart"
 import CarModelPie from "./components/CarModelPie"
 import CarAgePie from "./components/CarAgePie"
+import FilterOption from "./components/FilterOption"
 
 
 
@@ -16,7 +17,7 @@ let data=[]
     const userName=faker.name.fullName();
     const address=faker.helpers.arrayElement(['Canada', 'United States', 'Sweden','Japan','Australia','United Kingdom','France','India','Russia','Italy',]);
 
-  const age=faker.datatype.number({min: 18, max: 100});
+  const age=faker.datatype.number({min: 20, max: 99});
   const phoneNumber=faker.phone.number();
   const occupation=faker.name.jobTitle();
  
@@ -35,6 +36,7 @@ let data=[]
 <Barcharts  details={data} />
 <CarModelPie details={data} />
 <CarAgePie details={data}/>
+<FilterOption details={data}/>
    </div>
   );
 }

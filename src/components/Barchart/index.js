@@ -44,6 +44,8 @@ const b=country.map(eachCntry=>(
     }
   
     return (
+      <>
+      <h1>Bar chart according to which country users belong.</h1>
       <ResponsiveContainer width="80%" height={500}>
         <BarChart 
           data={b}
@@ -75,6 +77,8 @@ const b=country.map(eachCntry=>(
         </BarChart>
 
     </ResponsiveContainer>
+      </>
+      
   )
 }
 

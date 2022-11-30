@@ -10,7 +10,7 @@ const CarModelPie=props=>{
         each.vehicalInformation.model
     ))
 const carModels=[...new Set(carsModelsData)]
-    console.log(carModels)
+    
 
 const b=carModels.map(eachModel=>({
     CarModel:eachModel,
@@ -27,11 +27,13 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28','#e95566','#ff81ae', '#FF8042'];
   
 
     return(
-        <ResponsiveContainer  className="piechart"   width="100%" height={300}>
+      <>
+      <h1>Pie chart for their car models on the basis of their Car Maker</h1>
+      <ResponsiveContainer  className="piechart"   width="100%" height={300}>
         <PieChart>
           <Pie 
             cx="50%"
-            cy="40%"
+            cy="50%"
             data={b}
             startAngle={0}
             endAngle={360}
@@ -56,6 +58,8 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28','#e95566','#ff81ae', '#FF8042'];
           />
         </PieChart>
       </ResponsiveContainer>
+      </>
+        
     )
 }
 
